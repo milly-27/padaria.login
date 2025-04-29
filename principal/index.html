@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delícias Pink Delfins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu de Categorias -->
+    <div class="menu">
+      <button onclick="mostrarCategoria('doces')">Doces</button>
+      <button onclick="mostrarCategoria('salgados')">Salgados</button>
+      <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+    </div>
+
+    <!-- Produtos -->
+    <div class="produtos" id="produtos">
+      <!-- Produtos carregados via JS -->
+    </div>
+
+    <!-- Carrinho -->
+    <div class="carrinho" id="carrinho">
+      <h3>Carrinho</h3>
+      <table id="lista-carrinho">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Qtd</th>
+            <th>Preço</th>
+            <th>Subtotal</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-carrinho">
+          <!-- Itens serão inseridos aqui -->
+        </tbody>
+      </table>
+      <p id="total">Total: R$ 0,00</p>
+      <button id="btn-proximo" onclick="irParaCupom()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

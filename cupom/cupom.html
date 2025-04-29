@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplicar Cupom</title>
+  <link rel="stylesheet" href="cupom.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo">CUPOM</h1>
+
+    <div class="form-cupom">
+      <input type="text" id="input-cupom" placeholder="Digite seu cupom aqui..." />
+      <button onclick="verificarCupom()">🔍</button>
+    </div>
+
+    <p id="mensagem-cupom"></p>
+
+    <div class="botoes">
+      <button onclick="voltar()" class="btn-voltar">Voltar</button>
+      <button onclick="pagar()" class="btn-pagar">Pagar</button>
+    </div>
+  </div>
+
+  <script src="cupom.js"></script>
+</body>
+</html>

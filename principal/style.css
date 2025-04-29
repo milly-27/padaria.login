@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f0f8ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  border: 5px solid #ff69b4;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Menu */
+.menu {
+  flex: 1;
+  min-width: 200px;
+  background: #ffe4e1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #ffb6c1;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+/* Produtos */
+.produtos {
+  flex: 2;
+  background: #e6f7ff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 140px;
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card input {
+  width: 40px;
+  text-align: center;
+}
+
+.card button {
+  margin-top: 5px;
+  background-color: #90ee90;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Carrinho */
+.carrinho {
+  flex: 1.2;
+  min-width: 250px;
+  background: #fffacd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabela-carrinho {
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #f8c8dc;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Botões de Ação */
+.acoes {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.acoes button {
+  padding: 5px 8px;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.acoes button:hover {
+  background-color: #ff4500;
+  color: white;
+}
+
+/* Total */
+#total {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* Botão Próximo */
+#btn-proximo {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}

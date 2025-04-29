@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento | Doceria Pink Delfins</title>
+  <link rel="stylesheet" href="pagamento.css" />
+</head>
+<body>
+  <div class="pagamento-container">
+    <h1>Escolha a forma de pagamento</h1>
+    <div class="opcoes-pagamento">
+      <button class="btn-pagamento cartao" onclick="pagarCartao()">💳 Cartão</button>
+      <button class="btn-pagamento pix" onclick="pagarPIX()">🔗 PIX</button>
+    </div>
+
+    <div id="qrcode-area" class="qrcode-area" style="display: none;">
+      <h2>Escaneie o QR Code para pagar com PIX</h2>
+      <div id="qrcode"></div>
+    </div>
+
+    <div class="botoes-finais">
+      <button class="btn-voltar" onclick="voltar()">🔙 Voltar</button>
+      <div id="valor-final">Total a pagar: R$ <span id="valor-final-span">0.00</span></div>
+      <button class="btn-confirmar" onclick="confirmarPagamento()">🎉 Pago</button>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Bibliotecas externas -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="pagamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f0, #e0f7ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagamento-container {
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.opcoes-pagamento {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-pagamento {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-pagamento.cartao {
+  background-color: #87cefa;
+  color: white;
+}
+
+.btn-pagamento.pix {
+  background-color: #7fffd4;
+  color: #333;
+}
+
+.btn-pagamento:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.qrcode-area {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  /* Garante centralização do conteúdo dentro da área do QR Code */
+}
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px; /* Espaço entre o QR Code e o nome/valor */
+}
+
+#qrcode img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.nome-valor {
+  font-size: 18px;
+  color: #333;
+}
+
+.nome-valor p {
+  margin: 5px 0;
+}
+
+.botoes-finais {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-voltar, .btn-confirmar {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-voltar {
+  background-color: #ffc0cb;
+}
+
+.btn-confirmar {
+  background-color: #32cd32;
+  color: white;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+#pagamento-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#valor-final {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#botoes-pagamento button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#botoes-pagamento {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
