@@ -1,3 +1,4 @@
+/* Ajustes Globais */
 * {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
@@ -10,13 +11,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
+/* Container principal */
 .container {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   height: 90vh;
   border: 5px solid #ff69b4;
   border-radius: 20px;
@@ -24,27 +27,27 @@ body {
   background-color: #fff;
 }
 
-/* Menu */
+/* Menu lateral */
 .menu {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
   background: #ffe4e1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 15px;
+  padding: 15px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
 }
 
 .menu button {
-  padding: 10px;
+  padding: 8px;
   width: 100%;
   border: none;
   background-color: #ffb6c1;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s;
 }
 
@@ -57,10 +60,10 @@ body {
 .produtos {
   flex: 2;
   background: #e6f7ff;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
   align-items: flex-start;
   overflow-y: auto;
@@ -70,20 +73,22 @@ body {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
-  width: 140px;
+  width: 130px;
 }
 
 .card img {
   width: 100%;
-  height: 100px;
+  height: 90px;
   object-fit: cover;
 }
 
 .card input {
   width: 40px;
   text-align: center;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .card button {
@@ -91,6 +96,7 @@ body {
   background-color: #90ee90;
   border: none;
   padding: 5px;
+  font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -98,25 +104,28 @@ body {
 /* Carrinho */
 .carrinho {
   flex: 1.2;
-  min-width: 250px;
+  min-width: 220px; /* reduzido para evitar corte */
   background: #fffacd;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow-y: auto;
 }
 
 .tabela-carrinho {
   width: 100%;
   overflow-x: auto;
   text-align: center;
+  font-size: 12px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 5px;
+  table-layout: fixed; /* garante que as colunas respeitem o espaço */
 }
 
 thead {
@@ -125,25 +134,34 @@ thead {
 
 th, td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 4px;
+  text-align: center;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+td input[type="number"] {
+  width: 40px;
+  padding: 2px;
+  font-size: 12px;
   text-align: center;
 }
 
 /* Botões de Ação */
 .acoes {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   justify-content: center;
 }
 
 .acoes button {
-  padding: 5px 8px;
+  padding: 3px 5px;
   background-color: #ff7f50;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .acoes button:hover {
@@ -154,17 +172,18 @@ th, td {
 /* Total */
 #total {
   font-weight: bold;
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 /* Botão Próximo */
 #btn-proximo {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 8px 15px;
   background-color: #ffa500;
   border: none;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 14px;
 }
