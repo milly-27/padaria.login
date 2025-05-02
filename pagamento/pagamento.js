@@ -71,7 +71,7 @@ function pagarPIX() {
 
   const valor = window.valorFinalCalculado.toFixed(2); // Valor em string com 2 casas
   const chavePix = '02964990999'; // Chave Pix do recebedor
-  const nomeRecebedor = 'Emilly Mainko'; // Nome do recebedor
+  const nomeRecebedor = 'Celso Mainko'; // Nome do recebedor
   const cidade = 'SAO PAULO'; // Cidade do recebedor
   const descricao = 'Pagamento Doceria Pink Delfins'; // Descrição da transação
 
