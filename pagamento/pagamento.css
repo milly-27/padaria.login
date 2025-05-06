@@ -1,153 +1,153 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-sizing: border-box; /* Inclui padding e border dentro do tamanho total dos elementos */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Define a fonte padrão como Comic Sans com alternativas */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #ffe6f0, #e0f7ff);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0; /* Remove margens padrão do navegador */
+  padding: 0; /* Remove preenchimento padrão */
+  background: linear-gradient(135deg, #ffe6f0, #e0f7ff); /* Define um degradê de fundo diagonal */
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
 }
 
 .pagamento-container {
-  text-align: center;
-  background-color: white;
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  text-align: center; /* Centraliza o texto internamente */
+  background-color: white; /* Fundo branco */
+  border-radius: 20px; /* Cantos arredondados */
+  padding: 40px; /* Espaçamento interno */
+  max-width: 500px; /* Largura máxima do container */
+  width: 90%; /* Ocupa até 90% da largura da tela */
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); /* Sombra rosada ao redor do container */
 }
 
 h1 {
-  color: #ff69b4;
-  font-size: 32px;
-  margin-bottom: 30px;
+  color: #ff69b4; /* Cor rosa */
+  font-size: 32px; /* Tamanho da fonte do título */
+  margin-bottom: 30px; /* Espaçamento inferior */
 }
 
 .opcoes-pagamento {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  display: flex; /* Layout em linha com Flexbox */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 20px; /* Espaçamento entre os botões */
+  margin-bottom: 30px; /* Espaçamento inferior */
 }
 
 .btn-pagamento {
-  padding: 15px 25px;
-  border: none;
-  border-radius: 15px;
-  font-size: 18px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  padding: 15px 25px; /* Espaçamento interno (vertical e horizontal) */
+  border: none; /* Remove a borda padrão */
+  border-radius: 15px; /* Cantos arredondados */
+  font-size: 18px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  font-weight: bold; /* Texto em negrito */
+  transition: all 0.3s ease; /* Transição suave ao interagir */
 }
 
 .btn-pagamento.cartao {
-  background-color: #87cefa;
-  color: white;
+  background-color: #87cefa; /* Fundo azul claro */
+  color: white; /* Texto branco */
 }
 
 .btn-pagamento.pix {
-  background-color: #7fffd4;
-  color: #333;
+  background-color: #7fffd4; /* Fundo verde água */
+  color: #333; /* Texto cinza escuro */
 }
 
 .btn-pagamento:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
+  transform: scale(1.1); /* Aumenta levemente o botão ao passar o mouse */
+  opacity: 0.9; /* Deixa o botão um pouco mais transparente */
 }
 
 .qrcode-area {
-  display: none;
-  margin-top: 20px;
-  text-align: center;
+  display: none; /* Inicialmente escondido */
+  margin-top: 20px; /* Espaçamento acima */
+  text-align: center; /* Centraliza o conteúdo */
   /* Garante centralização do conteúdo dentro da área do QR Code */
 }
 
 #qrcode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex; /* Flexbox ativado */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Organiza os itens em coluna */
   margin-bottom: 20px; /* Espaço entre o QR Code e o nome/valor */
 }
 
 #qrcode img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
+  width: 200px; /* Largura fixa da imagem */
+  height: 200px; /* Altura fixa da imagem */
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
 
 .nome-valor {
-  font-size: 18px;
-  color: #333;
+  font-size: 18px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
 }
 
 .nome-valor p {
-  margin: 5px 0;
+  margin: 5px 0; /* Espaçamento vertical entre os parágrafos */
 }
 
 .botoes-finais {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 30px; /* Espaçamento superior */
+  display: flex; /* Flexbox ativado */
+  justify-content: space-between; /* Espaça os botões nas extremidades */
 }
 
 .btn-voltar, .btn-confirmar {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+  padding: 12px 25px; /* Espaçamento interno */
+  border: none; /* Remove borda padrão */
+  border-radius: 12px; /* Cantos arredondados */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 }
 
 .btn-voltar {
-  background-color: #ffc0cb;
+  background-color: #ffc0cb; /* Fundo rosa claro */
 }
 
 .btn-confirmar {
-  background-color: #32cd32;
-  color: white;
+  background-color: #32cd32; /* Fundo verde limão */
+  color: white; /* Texto branco */
 }
 
 #confetti-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 100;
+  position: fixed; /* Fixa o elemento na tela */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  pointer-events: none; /* Permite clicar em elementos por baixo */
+  z-index: 100; /* Coloca o canvas acima dos outros elementos */
 }
+
 #pagamento-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+  display: flex; /* Flexbox ativado */
+  flex-direction: column; /* Organiza em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  margin-top: 30px; /* Espaço superior */
 }
 
 #valor-final {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  margin-bottom: 20px; /* Espaço inferior */
+  color: #333; /* Cor do texto */
 }
 
 #botoes-pagamento button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  margin: 0 10px; /* Espaço horizontal entre botões */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro */
 }
 
 #botoes-pagamento {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; /* Flexbox ativado */
+  justify-content: center; /* Centraliza os botões */
+  gap: 20px; /* Espaçamento entre os botões */
 }
-

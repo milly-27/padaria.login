@@ -1,189 +1,189 @@
 /* Ajustes Globais */
 * {
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total dos elementos */
+  font-family: 'Arial', sans-serif; /* Define a fonte padrão como Arial ou uma fonte sem serifa */
 }
 
 body {
-  margin: 0;
-  background: #f0f8ff;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  margin: 0; /* Remove as margens padrão do body */
+  background: #f0f8ff; /* Define uma cor de fundo azul claro */
+  height: 100vh; /* Define a altura total da viewport */
+  display: flex; /* Ativa o modelo flexbox no body */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  overflow: hidden; /* Impede que o conteúdo ultrapasse a área visível */
 }
 
 /* Container principal */
 .container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1100px;
-  height: 90vh;
-  border: 5px solid #ff69b4;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #fff;
+  display: flex; /* Usa flexbox para alinhar os elementos filhos lado a lado */
+  flex-direction: row; /* Direção horizontal (linha) */
+  width: 100%; /* Largura total do container pai */
+  max-width: 1100px; /* Limita a largura máxima */
+  height: 90vh; /* Altura de 90% da viewport */
+  border: 5px solid #ff69b4; /* Borda rosa com 5px */
+  border-radius: 20px; /* Arredonda os cantos do container */
+  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+  background-color: #fff; /* Define fundo branco */
 }
 
 /* Menu lateral */
 .menu {
-  flex: 1;
-  min-width: 180px;
-  background: #ffe4e1;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  flex: 1; /* Ocupa uma fração do espaço disponível (proporcional ao total) */
+  min-width: 180px; /* Define uma largura mínima */
+  background: #ffe4e1; /* Fundo rosa claro */
+  display: flex; /* Flexbox ativado */
+  flex-direction: column; /* Organiza itens em coluna */
+  padding: 15px; /* Espaçamento interno */
+  gap: 10px; /* Espaço entre os elementos filhos */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
 }
 
 .menu button {
-  padding: 8px;
-  width: 100%;
-  border: none;
-  background-color: #ffb6c1;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
+  padding: 8px; /* Espaçamento interno do botão */
+  width: 100%; /* Ocupa toda a largura disponível do container */
+  border: none; /* Remove a borda padrão */
+  background-color: #ffb6c1; /* Cor de fundo rosa claro */
+  border-radius: 10px; /* Arredonda os cantos */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  font-size: 14px; /* Tamanho da fonte */
+  transition: background-color 0.3s; /* Suaviza a transição de cor */
 }
 
 .menu button:hover {
-  background-color: #ff69b4;
-  color: white;
+  background-color: #ff69b4; /* Cor mais forte ao passar o mouse */
+  color: white; /* Texto branco no hover */
 }
 
 /* Produtos */
 .produtos {
-  flex: 2;
-  background: #e6f7ff;
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: flex-start;
-  overflow-y: auto;
+  flex: 2; /* Ocupa o dobro do espaço do menu */
+  background: #e6f7ff; /* Cor de fundo azul claro */
+  padding: 15px; /* Espaçamento interno */
+  display: flex; /* Flexbox ativado */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  gap: 15px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: flex-start; /* Alinha os cards ao topo */
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
 }
 
 .card {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 8px;
-  text-align: center;
-  width: 130px;
+  background-color: #fff; /* Fundo branco */
+  border: 2px solid #ccc; /* Borda cinza */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 8px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+  width: 130px; /* Largura fixa do card */
 }
 
 .card img {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
+  width: 100%; /* Ocupa toda a largura do card */
+  height: 90px; /* Altura fixa */
+  object-fit: cover; /* Ajusta a imagem para cobrir sem distorcer */
 }
 
 .card input {
-  width: 40px;
-  text-align: center;
-  font-size: 14px;
-  margin: 5px 0;
+  width: 40px; /* Largura do input numérico */
+  text-align: center; /* Centraliza o número digitado */
+  font-size: 14px; /* Tamanho da fonte */
+  margin: 5px 0; /* Margem vertical entre elementos */
 }
 
 .card button {
-  margin-top: 5px;
-  background-color: #90ee90;
-  border: none;
-  padding: 5px;
-  font-size: 13px;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 5px; /* Espaço acima do botão */
+  background-color: #90ee90; /* Fundo verde claro */
+  border: none; /* Sem borda */
+  padding: 5px; /* Espaçamento interno */
+  font-size: 13px; /* Tamanho da fonte */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Mostra ponteiro ao passar o mouse */
 }
 
 /* Carrinho */
 .carrinho {
-  flex: 1.2;
-  min-width: 220px; /* reduzido para evitar corte */
-  background: #fffacd;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  overflow-y: auto;
+  flex: 1.2; /* Um pouco mais largo que o menu */
+  min-width: 220px; /* Define largura mínima */
+  background: #fffacd; /* Cor de fundo amarelo claro */
+  padding: 10px; /* Espaçamento interno */
+  display: flex; /* Flexbox ativado */
+  flex-direction: column; /* Itens em coluna */
+  justify-content: space-between; /* Espaça os itens ao máximo */
+  align-items: center; /* Centraliza horizontalmente */
+  overflow-y: auto; /* Permite rolagem vertical */
 }
 
 .tabela-carrinho {
-  width: 100%;
-  overflow-x: auto;
-  text-align: center;
-  font-size: 12px;
+  width: 100%; /* Ocupa toda a largura disponível */
+  overflow-x: auto; /* Permite rolagem horizontal se necessário */
+  text-align: center; /* Centraliza texto nas células */
+  font-size: 12px; /* Reduz o tamanho da fonte */
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 5px;
-  table-layout: fixed; /* garante que as colunas respeitem o espaço */
+  width: 100%; /* Largura total */
+  border-collapse: collapse; /* Remove espaçamento entre células */
+  margin-top: 5px; /* Espaço acima da tabela */
+  table-layout: fixed; /* Fixar largura das colunas */
 }
 
 thead {
-  background-color: #f8c8dc;
+  background-color: #f8c8dc; /* Cor de fundo para cabeçalho da tabela */
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 4px;
-  text-align: center;
-  font-size: 12px;
-  word-wrap: break-word;
+  border: 1px solid #ddd; /* Borda cinza clara */
+  padding: 4px; /* Espaçamento interno */
+  text-align: center; /* Centraliza texto */
+  font-size: 12px; /* Tamanho da fonte */
+  word-wrap: break-word; /* Quebra texto se necessário */
 }
 
 td input[type="number"] {
-  width: 40px;
-  padding: 2px;
-  font-size: 12px;
-  text-align: center;
+  width: 40px; /* Largura do campo de número */
+  padding: 2px; /* Espaçamento interno */
+  font-size: 12px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza número */
 }
 
 /* Botões de Ação */
 .acoes {
-  display: flex;
-  gap: 4px;
-  justify-content: center;
+  display: flex; /* Flexbox ativado */
+  gap: 4px; /* Espaço entre botões */
+  justify-content: center; /* Centraliza botões */
 }
 
 .acoes button {
-  padding: 3px 5px;
-  background-color: #ff7f50;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 12px;
+  padding: 3px 5px; /* Espaçamento interno (vertical e horizontal) */
+  background-color: #ff7f50; /* Fundo laranja */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Muda cursor ao passar o mouse */
+  font-weight: bold; /* Deixa o texto em negrito */
+  font-size: 12px; /* Tamanho da fonte */
 }
 
 .acoes button:hover {
-  background-color: #ff4500;
-  color: white;
+  background-color: #ff4500; /* Cor mais escura no hover */
+  color: white; /* Texto branco no hover */
 }
 
 /* Total */
 #total {
-  font-weight: bold;
-  margin-top: 10px;
-  font-size: 15px;
+  font-weight: bold; /* Negrito */
+  margin-top: 10px; /* Espaço acima do total */
+  font-size: 15px; /* Tamanho maior */
 }
 
 /* Botão Próximo */
 #btn-proximo {
-  margin-top: 15px;
-  padding: 8px 15px;
-  background-color: #ffa500;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
+  margin-top: 15px; /* Espaço acima do botão */
+  padding: 8px 15px; /* Espaçamento interno */
+  background-color: #ffa500; /* Fundo laranja */
+  border: none; /* Sem borda */
+  border-radius: 10px; /* Cantos arredondados */
+  font-weight: bold; /* Negrito */
+  cursor: pointer; /* Cursor interativo */
+  font-size: 14px; /* Tamanho da fonte */
 }
