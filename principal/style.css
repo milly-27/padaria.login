@@ -14,13 +14,56 @@ body {
   overflow: hidden; /* Impede que o conteúdo ultrapasse a área visível */
 }
 
+/* Cabeçalho fixo no topo - reduzindo altura e fontes */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px; /* reduzido para ficar mais compacto */
+  background: #ff69b4; /* rosa forte */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  box-shadow: 0 3px 6px rgba(255, 105, 180, 0.5);
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.3rem; /* fonte menor */
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+/* Botão login no topo direito */
+.login-button {
+  padding: 6px 15px; /* reduzido para caber melhor */
+  background-color: #ff1493; /* rosa escuro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #c71585; /* rosa mais escuro */
+}
+
 /* Container principal */
 .container {
   display: flex; /* Usa flexbox para alinhar os elementos filhos lado a lado */
   flex-direction: row; /* Direção horizontal (linha) */
   width: 100%; /* Largura total do container pai */
   max-width: 1100px; /* Limita a largura máxima */
-  height: 90vh; /* Altura de 90% da viewport */
+  height: 85vh; /* Altura maior para aproveitar espaço */
+  margin-top: 65px; /* espaço para o header fixo */
   border: 5px solid #ff69b4; /* Borda rosa com 5px */
   border-radius: 20px; /* Arredonda os cantos do container */
   overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
@@ -67,8 +110,10 @@ body {
   justify-content: center; /* Centraliza os cards horizontalmente */
   align-items: flex-start; /* Alinha os cards ao topo */
   overflow-y: auto; /* Permite rolagem vertical se necessário */
+  border-radius: 0 20px 20px 0;
 }
 
+/* Card do produto */
 .card {
   background-color: #fff; /* Fundo branco */
   border: 2px solid #ccc; /* Borda cinza */
@@ -76,12 +121,20 @@ body {
   padding: 8px; /* Espaçamento interno */
   text-align: center; /* Centraliza o conteúdo */
   width: 130px; /* Largura fixa do card */
+  box-shadow: 0 2px 6px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.6);
 }
 
 .card img {
   width: 100%; /* Ocupa toda a largura do card */
   height: 90px; /* Altura fixa */
   object-fit: cover; /* Ajusta a imagem para cobrir sem distorcer */
+  border-radius: 8px;
 }
 
 .card input {
@@ -93,12 +146,18 @@ body {
 
 .card button {
   margin-top: 5px; /* Espaço acima do botão */
-  background-color: #90ee90; /* Fundo verde claro */
+  background-color: #ff69b4; /* Fundo rosa forte */
   border: none; /* Sem borda */
   padding: 5px; /* Espaçamento interno */
   font-size: 13px; /* Tamanho da fonte */
   border-radius: 5px; /* Cantos arredondados */
   cursor: pointer; /* Mostra ponteiro ao passar o mouse */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #ff1493;
 }
 
 /* Carrinho */
@@ -112,13 +171,16 @@ body {
   justify-content: space-between; /* Espaça os itens ao máximo */
   align-items: center; /* Centraliza horizontalmente */
   overflow-y: auto; /* Permite rolagem vertical */
+  border-radius: 20px 0 0 20px;
+  box-shadow: inset 0 0 10px #ffb6c1;
 }
 
+/* Tabela carrinho - fonte menor e compacta */
 .tabela-carrinho {
   width: 100%; /* Ocupa toda a largura disponível */
   overflow-x: auto; /* Permite rolagem horizontal se necessário */
   text-align: center; /* Centraliza texto nas células */
-  font-size: 12px; /* Reduz o tamanho da fonte */
+  font-size: 12px; /* Fonte menor */
 }
 
 table {
@@ -126,6 +188,7 @@ table {
   border-collapse: collapse; /* Remove espaçamento entre células */
   margin-top: 5px; /* Espaço acima da tabela */
   table-layout: fixed; /* Fixar largura das colunas */
+  font-size: 12px; /* Fonte menor para texto compacto */
 }
 
 thead {
@@ -134,17 +197,21 @@ thead {
 
 th, td {
   border: 1px solid #ddd; /* Borda cinza clara */
-  padding: 4px; /* Espaçamento interno */
+  padding: 4px 6px; /* Espaçamento interno menor */
   text-align: center; /* Centraliza texto */
-  font-size: 12px; /* Tamanho da fonte */
-  word-wrap: break-word; /* Quebra texto se necessário */
+  font-size: 12px; /* Fonte menor */
+  white-space: nowrap; /* Evita quebra de linha */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 td input[type="number"] {
-  width: 40px; /* Largura do campo de número */
-  padding: 2px; /* Espaçamento interno */
-  font-size: 12px; /* Tamanho da fonte */
-  text-align: center; /* Centraliza número */
+  width: 50px; /* aumentei para caber até 3 dígitos */
+  padding: 2px 5px;
+  font-size: 12px; /* fonte um pouco maior para melhor leitura */
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ff69b4;
 }
 
 /* Botões de Ação */
@@ -174,16 +241,23 @@ td input[type="number"] {
   font-weight: bold; /* Negrito */
   margin-top: 10px; /* Espaço acima do total */
   font-size: 15px; /* Tamanho maior */
+  color: #ff1493;
 }
 
 /* Botão Próximo */
 #btn-proximo {
   margin-top: 15px; /* Espaço acima do botão */
   padding: 8px 15px; /* Espaçamento interno */
-  background-color: #ffa500; /* Fundo laranja */
+  background-color: #ff69b4; /* Fundo rosa forte */
   border: none; /* Sem borda */
   border-radius: 10px; /* Cantos arredondados */
   font-weight: bold; /* Negrito */
   cursor: pointer; /* Cursor interativo */
   font-size: 14px; /* Tamanho da fonte */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#btn-proximo:hover {
+  background-color: #ff1493;
 }

@@ -8,6 +8,22 @@
 </head>
 <body>
 
+  <header>
+    <h1>Padaria Pink Delfins</h1>
+    <a href="../login/login.html" class="login-button">Login</a>
+  </header>
+
+
+  <div id="painel-adm" style="display: none;">
+    <h2>Painel Administrativo</h2>
+    <button onclick="abrirAdicionarProduto()">Adicionar Produto</button>
+    <button onclick="abrirModificarProduto()">Modificar Produto</button>
+    <button onclick="abrirExcluirProduto()">Excluir Produto</button>
+    <button onclick="abrirGerenciarCupons()">Gerenciar Cupons</button>
+    <!-- Você pode expandir com mais botões ou modais -->
+  </div>
+  
+
   <!-- A tag <main> representa o conteúdo principal da página.
        Deve conter o conteúdo central da página, que está diretamente relacionado com o propósito principal do site. -->
   <main class="container"> 
@@ -19,6 +35,7 @@
       <button onclick="mostrarCategoria('salgados')">Salgados</button> <!-- Botão para mostrar categoria 'Salgados' -->
       <button onclick="mostrarCategoria('bebidas')">Bebidas</button> <!-- Botão para mostrar categoria 'Bebidas' -->
     </nav>
+    
 
     <!-- A tag <section> representa uma seção genérica de conteúdo.
          É usada para agrupar conteúdo tematicamente relacionado — neste caso, os produtos. -->

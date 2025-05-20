@@ -22,6 +22,31 @@ const produtos = {
     { nome: "Café", preco: 2.5, imagem: "../imagens/cafe.jpeg" } // Produto: Café
   ]
 };
+window.onload = () => {
+  const usuario = localStorage.getItem("usuarioLogado");
+  if (usuario === "adm") {
+    document.getElementById("painel-adm").style.display = "block";
+  }
+};
+window.onload = () => {
+  const usuario = localStorage.getItem("usuarioLogado");
+  if (usuario === "adm") {
+    document.getElementById("painel-adm").style.display = "block";
+  }
+};
+
+function abrirAdicionarProduto() {
+  const nome = prompt("Nome do produto:");
+  const preco = prompt("Preço:");
+  const imagem = prompt("URL da imagem:");
+  if (nome && preco && imagem) {
+    const produtos = JSON.parse(localStorage.getItem("produtos") || "[]");
+    produtos.push({ nome, preco, imagem });
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+    alert("Produto adicionado!");
+  }
+}
+
 
 // Recupera carrinho do localStorage (ou inicializa vazio)
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -121,4 +146,28 @@ function atualizarQuantidadeDireta(index, valor) {
 function irParaCupom() {
   localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Salva o carrinho antes de mudar de página
   window.location.href = '../cupom/cupom.html'; // Redireciona para a página do cupom
+}
+// Exemplo: pegar o nome do usuário do localStorage (ajuste conforme sua forma real)
+const usuarioLogado = localStorage.getItem('usuario'); // ou 'username', 'user', etc.
+
+// Verifica se existe usuário e o elemento para mostrar
+if (usuarioLogado) {
+  // Tenta encontrar um container já existente no header para mostrar o usuário
+  let userDisplay = document.getElementById('userLogged');
+
+  // Se não existir, cria um elemento e adiciona no cabeçalho
+  if (!userDisplay) {
+    userDisplay = document.createElement('div');
+    userDisplay.id = 'userLogged';
+    userDisplay.style.marginLeft = 'auto'; // por exemplo, para alinhar à direita no flex
+    userDisplay.style.color = '#333'; // só um exemplo de estilo
+    // Adiciona dentro do header (ajuste o seletor para o seu cabeçalho)
+    const header = document.querySelector('header');
+    if (header) {
+      header.appendChild(userDisplay);
+    }
+  }
+
+  // Insere o nome do usuário no elemento
+  userDisplay.textContent = `Olá, ${usuarioLogado}`;
 }
